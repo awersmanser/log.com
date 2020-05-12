@@ -44,16 +44,16 @@ setInterval(authCheck, 1);
 
 function authAttention() {
     if (authCheck().includes('login:false')) {
-        document.querySelector('#auth-circle-login').style.animation = 'auth-attention .5s infinite ease alternate';
-        setTimeout(() => document.querySelector('#auth-circle-login').style.animation = '', 3000);
+        document.querySelector('#auth-circle-login').style.animation = 'auth-attention .25s infinite ease alternate';
+        setTimeout(() => document.querySelector('#auth-circle-login').style.animation = '', 1500);
     } else {
         if (authCheck().includes('password:false')) {
             document.querySelector('#password').focus();
         }
     }
     if (authCheck().includes('password:false')) {
-        document.querySelector('#auth-circle-password').style.animation = 'auth-attention .5s infinite ease alternate';
-        setTimeout(() => document.querySelector('#auth-circle-password').style.animation = '', 3000);
+        document.querySelector('#auth-circle-password').style.animation = 'auth-attention .25s infinite ease alternate';
+        setTimeout(() => document.querySelector('#auth-circle-password').style.animation = '', 1500);
     } else {
         if (authCheck().includes('login:false')) {
             document.querySelector('#login').focus();
