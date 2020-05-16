@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta charset="keywords" content="">
-    <meta charset="description" content="">
+    <meta charset="keywords" content="log, test, star">
+    <meta charset="description" content="Test site with firing star">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
@@ -12,7 +12,9 @@
 </head>
 
 <body>
-    <div class="preloader"><span>Loading...</span><div class="loading"></div></div>
+    <div class="preloader"><span>Loading...</span>
+        <div class="loading"></div>
+    </div>
     <div class="modal-notification-window">
         <div class="modal-notification-window-content">
             <div class="modal-notification-window-header">
@@ -27,10 +29,8 @@
         <div class="modal-notification-window-background" title="Close"></div>
     </div>
     <div class="star">
-        <div class="container">
-            <button class="back-button">&#8249BACK</button>
-            <div class="star-object"></div>
-        </div>
+        <button class="back-button">&#8249BACK</button>
+        <div class="star-object"></div>
     </div>
     <div class="container">
         <div class="title-side">
@@ -41,8 +41,8 @@
                 <li>comfortable work with text</li>
             </ul>
         </div>
-        <div class="auth">
-            <div class="auth grid">
+        <div class="auth-side">
+            <div class="auth">
                 <label for="login">login</label>
                 <input type="text" class="auth-input" id="login" maxlength="25">
                 <div class="auth-circle" id="auth-circle-login"></div>
@@ -54,13 +54,17 @@
         </div>
         <div class="gif-side">
             <h2>gif</h2>
-            <div class="gif"></div>
+            <div class="gif">
+                <div class="loading" id="gif-loading"></div>
+            </div>
         </div>
         <footer>
-<span>@copyrighted 2020</span>
-<span>social media: </span>
-<span></span>
-<span></span>
+            <span>@copyrighted 2020</span>
+            <div class="social-medias">
+                <a class="inst" title="Instagram" href='https://instagram.com' target="_blank"></a>
+                <a class="vk" title="VK" href='https://vk.com' target="_blank"></a>
+                <span>social medias: </span>
+            </div>
         </footer>
     </div>
     <script type="text/javascript" src="script.js"></script>

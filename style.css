@@ -1,48 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
-    background: #070707;
     font-family: Arial, sans-serif;
-    color: #fff;
-    margin: 0px;
+    color: rgb(255, 255, 255);
+    margin: 0;
     padding: 0;
     font-size: 35px;
     box-sizing: border-box;
+}
+
+::selection {
+    background: rgb(128, 103, 243);
 }
 
 br {
     user-select: none;
 }
 
-.grid {
-    display: grid;
-    grid-template-rows: repeat(2, 100px);
-    grid-template-columns: repeat(3, auto);
+body {
+    background: rgb(7, 7, 7);
+}
+
+.gif-side h2 {
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
 }
 
 .preloader {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #070707;
+    background: rgb(7, 7, 7);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .25s ease;
     z-index: 4;
-    transition: all .25s ease-in-out;
 }
 
-.loading{
+.loading {
     width: 100px;
     height: 100px;
     background: url(images/loading.png);
     border-radius: 50%;
     animation: loading .5s infinite ease;
-}
-
-@keyframes loading{
-to{
-transform: rotate(360deg);
-}
+    position: relative;
+    transition: all .25s ease;
 }
 
 .container {
@@ -50,18 +53,32 @@ transform: rotate(360deg);
     width: 100%;
     max-width: 1500px;
     min-width: 480px;
-    background: transparent;
 }
 
 .title-side {
+    margin-top: 50px;
     float: left;
     margin-left: 50px;
 }
 
+.auth-side{
+margin-top: 200px;
+float: right;
+}
+
+.gif-side{
+
+}
+
+
+footer {
+    width: 100%;
+    height: 100px;
+}
+
 .title {
-    color: #32db05;
+    color: rgb(20, 223, 30);
     font-size: 150px;
-    margin-top: 85px;
 }
 
 .sub-title {
@@ -74,13 +91,13 @@ transform: rotate(360deg);
 }
 
 .auth {
-    width: 700px;
-    float: right;
-    margin-top: 125px;
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(3, auto);
 }
 
 .auth label {
-    color: #39adf7;
+    color: rgb(57, 173, 247);
     cursor: pointer;
 }
 
@@ -88,72 +105,106 @@ transform: rotate(360deg);
     border: none;
     width: 400px;
     height: 40px;
-    color: #000;
-    background: #fff;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     border-radius: 15px;
     padding-left: 10px;
     font-size: 25px;
-    border: 3px solid #fff;
+    border: 3px solid rgb(255, 255, 255);
+    margin-left: 30px;
 }
 
 .auth-input:focus {
     outline: none;
-    border-color: #ffa500;
+    border-color: rgb(255, 165, 0);
 }
 
 .auth-circle {
-    background: #808080;
+    background: rgb(128, 128, 128);
     border-radius: 50%;
     width: 15px;
     height: 15px;
     margin-top: 10px;
+    margin-left: 30px;
 }
 
 .auth-button {
-    background: #32db05;
+    background: rgb(20, 223, 30);
     border-radius: 20px;
     border: none;
     padding: 1px 25px;
     cursor: pointer;
-    margin-left: 350px;
+    margin-left: 310px;
 }
 
-.auth-button:hover {
-    background: #4bff1a;
-}
-
-.auth-button:focus {
+.auth-button:hover, .auth-button:focus {
     outline: none;
-    background: #5dfa31;
+    background: rgb(75, 255, 26);
 }
 
 .auth-button:active {
-    transform: scale(0.95);
+    transform: scale(.95);
 }
 
-footer{
+.gif-side {}
 
+.gif {
+    width: 450px;
+    height: 250px;
+    background: rgb(39, 39, 39);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-footer span{
-    color: #808080;
-}
-
-footer:nth-child(1){
+footer span {
     float: left;
+    color: rgb(128, 128, 128);
 }
 
-footer:nth-child(2){
+footer span:nth-child(1) {
+    margin-left: 25px;
+}
+
+.inst {
+    display: block;
+    background: url(images/instagram_logo.png);
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .25s ease;
     float: right;
 }
 
+.vk {
+    display: block;
+    background: url(images/vk_logo.png);
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .25s ease;
+    float: right;
+    margin: 0 10px;
+}
+
+.vk:hover, .inst:hover {
+    transform: scale(1.1);
+}
+
+.vk:active, .inst:active {
+    transform: scale(1);
+}
+
 .star {
-    /*visibility:hidden;*/
     width: 100%;
     height: 100%;
-    background: #0c0c0c;
+    background: rgb(12, 12, 12);
     position: fixed;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -163,32 +214,29 @@ footer:nth-child(2){
     position: fixed;
     text-transform: uppercase;
     border: none;
-    background: transparent;
     top: 0;
     left: 0;
     cursor: pointer;
     padding: 50px;
+    background: transparent;
 }
 
 .back-button:hover {
-    background: #000;
+    background: rgb(0, 0, 0);
 }
 
 .star-object {
     width: 400px;
     height: 400px;
-    background: #f7f8e9;
+    background: rgb(247, 248, 233);
     border-radius: 50%;
-    box-shadow: 0 0 100px 25px #f7f8e9;
-    position: absolute;
-    margin-left: calc(50% - 400px);
+    box-shadow: 0 0 100px 25px rgb(247, 248, 233);
 }
 
 .modal-notification-window-background {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: transparent;
     cursor: pointer;
     z-index: 2;
 }
@@ -201,6 +249,7 @@ footer:nth-child(2){
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 .modal-notification-window-content {
@@ -208,60 +257,58 @@ footer:nth-child(2){
     max-width: 620px;
     min-width: 480px;
     height: auto;
-    background: #353535;
-    opacity: 0.75;
+    background: rgb(53, 53, 53);
+    opacity: .75;
     position: fixed;
     border-radius: 20px;
-    box-shadow: #000 0 0 25px;
+    box-shadow: rgb(0, 0, 0) 0 0 25px;
     z-index: 3;
 }
 
 .modal-notification-window-header {
     width: 100%;
     height: 45px;
-    background: transparent;
     border-radius: 20px 20px 0 0;
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid rgb(255, 255, 255);
 }
 
 .modal-notification-window-header-title {
     font-size: 35px;
     font-weight: normal;
-    background: transparent;
     margin-left: 13px;
+    float: left;
 }
 
 .modal-notification-window-close-button {
     cursor: pointer;
     float: right;
     border: none;
-    background: transparent;
     border-radius: 0px 20px 0 0;
     font-size: 30px;
     height: 41px;
     padding: 0 15px;
     user-select: none;
+    background: transparent;
 }
 
 .modal-notification-window-close-button:hover {
-    background: #ff3e3e;
+    background: rgb(255, 62, 62);
 }
 
 .modal-notification-window-close-button:active {
-    background: #eb1515;
+    background: rgb(235, 21, 21);
     transition: 0s;
 }
 
 .modal-notification-window-text {
-    background: transparent;
     margin: 15px;
     font-size: 30px;
 }
 
 .modal-notification-window-accept-button {
     border: none;
-    background: #fff;
-    color: #000;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 20px;
     cursor: pointer;
     font-size: 30px;
@@ -272,17 +319,23 @@ footer:nth-child(2){
 }
 
 .modal-notification-window-accept-button:hover {
-    background: #dbdbdb;
+    background: rgb(219, 219, 219);
 }
 
 .modal-notification-window-accept-button:active {
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 
 .modal-notification-window-body {
-    background: transparent;
     display: flex;
     flex-direction: column;
+}
+
+.social-medias {
+    width: 350px;
+    height: 50px;
+    float: right;
+    margin-left: 25px;
 }
 
 @keyframes auth-attention {
@@ -294,15 +347,21 @@ footer:nth-child(2){
     }
 }
 
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 1500px) {}
 
-@media (max-width: 620px) {
-    .modal-notification-window-content {
-        left: 0;
-    }
-    .grid {
-        grid-template-rows: repeat(2, 100px);
-        grid-template-columns: repeat(3, auto);
+@media (max-width: 720px) {
+    .auth {
+        display: block;
+
     }
     .title-side {}
+    .social-medias {
+        float: left;
+    }
 }
