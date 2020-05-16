@@ -15,15 +15,8 @@ window.onload = function () {
     closeNotification();
     setTimeout(() => { document.querySelector('.preloader').style.opacity = '0', document.querySelector('.preloader').style.visibility = 'hidden' }, 500);
     setTimeout(() => { document.querySelector('#gif-loading').style.opacity = '0', document.querySelector('.gif').style.background = 'url(images/gif_background.gif)' }, 1500);
-    show=getCookie(show);
+    if(document.cookie=='show=true'){show = true }
 }
-
-function getCookie(name) {
-    let matches = document.cookie.match(new RegExp(
-      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ));
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-  }
 
 function authCheck(login, password, authLog) {
     if (document.querySelector('#login').value == 'asdfG1') {
