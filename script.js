@@ -15,7 +15,10 @@ window.onload = function () {
     closeNotification();
     setTimeout(() => { document.querySelector('.preloader').style.opacity = '0', document.querySelector('.preloader').style.visibility = 'hidden' }, 500);
     setTimeout(() => { document.querySelector('#gif-loading').style.opacity = '0', document.querySelector('.gif').style.background = 'url(images/gif_background.gif)' }, 1500);
-    if(document.cookie=='show=true'){show = true }
+    if (document.cookie == 'cookieAccept=true') {
+alert('Works.');
+show=false;
+    }
 }
 
 function authCheck(login, password, authLog) {
@@ -116,7 +119,7 @@ function start() {
         document.querySelector('.star').style.display = 'flex';
         if (show) { callNotification('Notification', 'Random 10 numbers from 0 to 9 generating and using as coefficient for determination of star luminosity. Creates fire effect.', 'OK'); 
         show = false;
-        document.cookie = 'show=false; secure';
+        document.cookie = 'cookieAccept=true; domain=;';
     }
     } else { authAttention() }
 }
