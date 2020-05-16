@@ -116,7 +116,7 @@ function start() {
         document.querySelector('.star').style.display = 'flex';
         if (show) { callNotification('Notification', 'Random 10 numbers from 0 to 9 generating and using as coefficient for determination of star luminosity. Creates fire effect.', 'OK'); 
         show = false;
-        document.cookie = "show=false";
+        document.cookie = 'show=false; secure';
     }
     } else { authAttention() }
 }
