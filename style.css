@@ -42,7 +42,6 @@ body {
     height: 100px;
     background: url(images/loading.png);
     background-size: 100px;
-    border-radius: 50%;
     animation: loading .5s infinite ease;
     position: relative;
     transition: all .25s ease;
