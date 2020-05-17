@@ -3,18 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--SEO-->
     <meta charset="keywords" content="log, test, star">
-    <meta charset="description" content="Test site with firing star">
+    <meta charset="description" content="Test site with firing star.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Icon-->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!--CSS import-->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!--Preloader-->
     <div class="preloader"><span>Loading...</span>
         <div class="loading"></div>
     </div>
+    <!--Modal notification window-->
     <div class="modal-notification-window">
         <div class="modal-notification-window-content">
             <div class="modal-notification-window-header">
@@ -28,45 +33,48 @@
         </div>
         <div class="modal-notification-window-background" title="Close"></div>
     </div>
+    <!--Star screen-->
     <div class="star">
-        <button class="back-button">&#8249BACK</button>
+        <button class="back-button">&#8249 BACK</button>
         <div class="star-object"></div>
     </div>
+    <!--Main screen-->
     <div class="container">
-        <div class="title-side">
-            <div class="title">log.</div>
-            <ul class="sub-title">
-                <li>create your docs</li>
-                <li>open your backdoors</li>
-                <li>comfortable work with text</li>
-            </ul>
-        </div>
-        <div class="auth-side">
-            <div class="auth">
-                <label for="login">login</label>
-                <input type="text" class="auth-input" id="login" maxlength="25">
-                <div class="auth-circle" id="auth-circle-login"></div>
-                <label for="password">password</label>
-                <input type="password" class="auth-input" id="password" maxlength="25">
-                <div class="auth-circle" id="auth-circle-password"></div>
+        <div class="title-and-auth-side">
+            <div class="title-side">
+                <div class="title">log.</div>
+                <ul class="sub-title">
+                    <li>create your docs</li>
+                    <li>open your backdoors</li>
+                    <li>comfortable work with text</li>
+                </ul>
             </div>
-            <button class="auth-button">start</button>
-        </div>
-        <div class="gif-side">
-            <h2>gif</h2>
-            <div class="gif">
-                <div class="loading" id="gif-loading"></div>
+            <div class="auth-side">
+                <div class="auth">
+                    <label for="login">login</label>
+                    <input type="text" class="auth-input" id="login" maxlength="25">
+                    <div class="auth-circle" id="auth-circle-login"></div>
+                    <label for="password">password</label>
+                    <input type="password" class="auth-input" id="password" maxlength="25">
+                    <div class="auth-circle" id="auth-circle-password"></div>
+                </div>
+                <button class="auth-button">start</button>
             </div>
+        </div>
+        <h2>gif</h2>
+        <div class="gif">
+            <div class="loading" id="gif-loading"></div>
         </div>
         <footer>
             <span>@copyrighted 2020</span>
             <div class="social-medias">
-                <a class="inst" title="Instagram" href='https://instagram.com' target="_blank"></a>
+                <a class="instagram" title="Instagram" href='https://instagram.com' target="_blank"></a>
                 <a class="vk" title="VK" href='https://vk.com' target="_blank"></a>
                 <span>social medias: </span>
             </div>
         </footer>
     </div>
+    <!--JS import-->
     <script type="text/javascript" src="script.js"></script>
 </body>
 
