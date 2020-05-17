@@ -125,6 +125,8 @@ function closeNotification() {
 function start() {
     document.querySelector('.auth-button').blur();
     if (authCheck().includes('Login: true') & authCheck().includes('password: true')) {
+        loginInput.setAttribute('readonly', '');
+        passwordInput.setAttribute('readonly', '');
         document.body.style.overflow = 'hidden';
         document.querySelector('.star').style.display = 'flex';
         if (show) {
@@ -134,6 +136,8 @@ function start() {
                 overflow = false;
             }, 500)
         }
+        loginInput.removeAttribute('readonly');
+        passwordInput.removeAttribute('readonly');
     } else { authAttention() }
 }
 
