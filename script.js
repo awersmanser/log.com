@@ -128,11 +128,10 @@ function start() {
         document.body.style.overflow = 'hidden';
         document.querySelector('.star').style.display = 'flex';
         if (show) {
-            setTimeout(() => {
-                callNotification('Notification', 'Random 10 numbers from 0 to 9 generating and using as coefficient for determination of star luminosity. Creates fire effect.', 'OK');
-                show = false;
-                overflow = false;
-            }, 3000)
+            select = 0;
+            callNotification('Notification', 'Random 10 numbers from 0 to 9 generating and using as coefficient for determination of star luminosity. Creates fire effect.', 'OK');
+            show = false;
+            overflow = false;
         }
     } else { authAttention() }
 }
