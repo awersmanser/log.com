@@ -387,9 +387,6 @@ footer span {
 }
 
 @media (max-width: 720px) {
-    .title-and-auth-side {
-        display: inline;
-    }
     .title-side {
         margin-top: 5px;
     }
