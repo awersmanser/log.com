@@ -212,7 +212,7 @@ footer {
 
 .auth-input {
     border: none;
-    width: 400px;
+    width: 320px;
     height: 40px;
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
@@ -263,7 +263,7 @@ footer {
 }
 
 .gif {
-    width: 450px;
+    width: 320px;
     height: 250px;
     background: rgb(39, 39, 39);
     border-radius: 20px;
@@ -279,7 +279,7 @@ footer span {
 }
 
 .social-medias {
-    width: 350px;
+    width: 320px;
     height: 50px;
     float: right;
 }
@@ -419,7 +419,7 @@ footer span {
         align-self: center;
     }
     .gif {
-        width: 435px;
+        width: 320px;
         height: 235px;
     }
     footer {
