@@ -50,7 +50,7 @@ body {
 .container {
     width: 100%;
     max-width: 1500px;
-    min-width: 320px;
+    min-width: 480px;
     margin: 0 auto;
     padding: 25px;
 }
@@ -212,7 +212,7 @@ footer {
 
 .auth-input {
     border: none;
-    width: 320px;
+    width: 400px;
     height: 40px;
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
@@ -226,6 +226,7 @@ footer {
 .auth-input:focus {
     outline: none;
     border-color: rgb(255, 165, 0);
+   
 }
 
 .auth-circle {
@@ -263,7 +264,7 @@ footer {
 }
 
 .gif {
-    width: 320px;
+    width: 450px;
     height: 250px;
     background: rgb(39, 39, 39);
     border-radius: 20px;
@@ -279,7 +280,7 @@ footer span {
 }
 
 .social-medias {
-    width: 320px;
+    width: 350px;
     height: 50px;
     float: right;
 }
@@ -419,7 +420,7 @@ footer span {
         align-self: center;
     }
     .gif {
-        width: 320px;
+        width: 435px;
         height: 235px;
     }
     footer {
